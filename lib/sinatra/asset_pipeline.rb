@@ -15,7 +15,7 @@ module Sinatra
 
       app.set :static, true
       app.set :assets_digest, true
-      app.set :static_cache_control, [:public, :max_age => 60 * 60 * 24 * 365]
+      app.set :static_cache_control, [:public, {:max_age => 60 * 60 * 24 * 365}]
 
       app.configure do
         app.assets_prefix.each do |prefix|
